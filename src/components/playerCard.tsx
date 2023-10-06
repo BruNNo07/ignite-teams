@@ -4,9 +4,10 @@ import { ButtonIcon } from "./buttonIcon";
 
 type PlayerCardProps = {
   name: string
+  onRemove: () => void
 }
 
-export function PlayerCard ({name}:PlayerCardProps){
+export function PlayerCard ({name, onRemove}:PlayerCardProps){
   return(
     <View className="rounded-lg h-14 bg-GRAY-500 flex-row items-center justify-center mb-4">
       <View className="mx-2">
@@ -22,6 +23,7 @@ export function PlayerCard ({name}:PlayerCardProps){
 
       <ButtonIcon 
         variant="rem"
+        onPress={onRemove}
       />
     </View>
   )

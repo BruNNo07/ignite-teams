@@ -5,6 +5,7 @@ import { LoadingScreen } from '@components/loadingScreen';
 import { StatusBar } from 'react-native';
 import { NewGroup } from '@screens/newGroup';
 import { Players } from '@screens/players';
+import { Routes } from '@routes/index';
 
 export default function App() {
   const [fontsLoaded] = useFonts({Roboto_400Regular, Roboto_700Bold})
@@ -12,7 +13,7 @@ export default function App() {
   return (
     <>
       {
-        fontsLoaded ? <Players /> : <LoadingScreen /> 
+        fontsLoaded ? <Routes /> : <LoadingScreen /> 
       }
       <StatusBar barStyle={'light-content'} translucent backgroundColor={'transparent'} />
     </>
